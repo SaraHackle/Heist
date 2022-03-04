@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 
 namespace Heist 
@@ -17,6 +19,8 @@ namespace Heist
             SkillLevel = skillLevel;
             Courage = courageLevel;
         }
+
+       
 
     }
 
