@@ -37,14 +37,33 @@ namespace Heist
                     //add newest team member to the heist team list
                     heistCrew.addTeamMember(newTeamMember);
 
+
+
+
                 }
             }
+
             //display all team member stats after user stops entering new names
             heistCrew.displayHeistCrew();
 
             //display a total count of heist team members
             Console.WriteLine($"Total number of team members: {heistCrew.HeistTeam.Count}");
 
+            //create a new bank instance    
+            Bank newBank = new Bank("Chase", 100);
+
+            //create a total skill level
+            int teamSkillLevel = heistCrew.TotalSkill();
+            //display if team can successfully compelte the heist
+            if (teamSkillLevel >= newBank.Difficulty )
+            {
+                Console.WriteLine("Success! Your team completed the heist");
+            }
+            else
+            {
+                 Console.WriteLine("FAIL! Straight to Jail, and you're still poor.");
+                
+            }
         }
     }
 }
